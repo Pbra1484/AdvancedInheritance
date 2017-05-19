@@ -13,7 +13,7 @@ public class Slurp implements LoudNoises
 		
 	}
 	
-	public double noiseVolume(double sound)
+	public double noiseVolume(Double sound)
 	{
 		return soundLevel * sound * 99999999999999e170;
 	}
@@ -28,7 +28,7 @@ public class Slurp implements LoudNoises
 		return "SLUUSUUSUSUSUSUSUSS";
 	}
 	
-	public double dunkinClap()
+	public double duncanClap()
 	{
 		return -742380045845850466803680356890632.0;
 	}

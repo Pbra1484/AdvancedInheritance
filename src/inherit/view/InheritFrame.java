@@ -1,41 +1,31 @@
 package inherit.view;
 
-import java.awt.Dimension;
-
 import javax.swing.JFrame;
 import inherit.controller.Controller;
-
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class InheritFrame extends JFrame
 {
-	
 	private Controller baseController;
-	private InheritPanel appPanel;
+	private InheritPanel inheritPanel;
 	
-	
-	/**
-	 * Initializes the controller and panel then calls the helper method setupFrame
-	 * @param baseController
-	 */
-	public InheritFrame(ChatController baseController)
+	public InheritFrame(Controller baseController)
 	{
 		super();
 		this.baseController = baseController;
-		this.appPanel = new InheritPanel(baseController);
-		
-		this.setupFrame();
+		inheritPanel = new InheritPanel(baseController);
+		setupFrame();
 	}
 	
-	/**
-	 * Sets up the conditions of the frame
-	 */
 	private void setupFrame()
 	{
-		this.setContentPane(appPanel);
-		this.setTitle("yep");
-		this.setSize(new Dimension(450, 300));
-		this.setLocationRelativeTo(null);
-		this.setVisible(true);
+		this.setContentPane(inheritPanel);
+		this.setTitle("Advanced Inheritance");
+		this.setSize(new Dimension(900,600));
+		this.setResizable(false);
+		this.setVisible(true);	
 	}
 
 }
